@@ -25,3 +25,15 @@
  .xlarge{
     font-size: x-large; 
  }
+
+ .onepixel{
+     border:1px dotted #000000;
+ }
+
+ .threepixels{
+    border:3px dotted #000000;
+}
+
+.fivepixels{
+    border:5px dotted #000000;
+}
