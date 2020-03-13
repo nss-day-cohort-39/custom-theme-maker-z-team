@@ -16,3 +16,19 @@ export const BorderButtons = () => {
         </article>
     `
 }
+
+const eventHub = document.querySelector("#container")
+
+eventHub.addEventListener("change", changeEvent => {
+    if (changeEvent.target.name === "pixelsize") {
+        const theSizeThatWasChosen = changeEvent.target.value
+
+        const sizeChosenEvent = new CustomEvent("sizeChosen", {
+            detail: {
+                chosenSize: theSizeThatWasChosen
+            }
+        })
+
+        eventHub.dispatchEvent(sizeChosenEvent)
+    }
+})
