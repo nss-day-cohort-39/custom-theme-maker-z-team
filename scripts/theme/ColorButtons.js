@@ -14,7 +14,6 @@ export const ColorButtons = () => {
     }
     
 const eventHub = document.querySelector('#container')
-const contentTarget = document.querySelector('.colors')
 eventHub.addEventListener('click', event=> {
     const mySelection = event.target.id
     if(mySelection.startsWith('btnTheme--')){
