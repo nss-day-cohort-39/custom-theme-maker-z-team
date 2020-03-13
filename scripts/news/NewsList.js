@@ -14,8 +14,18 @@ eventHub.addEventListener("FontChosen", EventChange => {
         newsObject.classList = []
         newsObject.classList.add(My_Selection)
         newsObject.classList.add("newsItem")
-        
-    }
+    }   
+    })
+
+    eventHub.addEventListener("sizeChosen", EventChange => {
+        const newsCard = document.querySelectorAll('.newsItem')
+        //console.log(scoreCard)
+        const My_Selection = EventChange.detail.chosenSize
+        for (const element of newsCard) {
+            element.classList = []
+            element.classList.add(My_Selection)
+            element.classList.add("newsItem")    
+        }
     
 })
 
