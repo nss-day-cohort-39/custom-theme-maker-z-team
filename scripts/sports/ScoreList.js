@@ -15,6 +15,18 @@ eventHub.addEventListener("sizeChosen", EventChange => {
 
 })
 
+eventHub.addEventListener("FontChosen", EventChange => {
+    const scoresContainer = document.querySelectorAll('.score')
+    const My_Selection = EventChange.detail.Font
+    for (const scoreObject of scoresContainer) {
+        scoreObject.classList = []
+        scoreObject.classList.add(My_Selection)
+        scoreObject.classList.add("score")
+        
+    }
+    
+})
+
 
 export const ScoreList = () => {
     const scores = useScores()
