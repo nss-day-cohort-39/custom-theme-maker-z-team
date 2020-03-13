@@ -9,6 +9,19 @@ eventHub.addEventListener("FontChosen", EventChange => {
     favoritesContainer.classList.add(My_Selection)
     favoritesContainer.classList.add("favorites")
 })
+
+eventHub.addEventListener("sizeChosen", EventChange => {
+    const FavoriteCard = document.querySelectorAll('.favoriteItem')
+    //console.log(scoreCard)
+    const My_Selection = EventChange.detail.chosenSize
+    for (const element of FavoriteCard) {
+        element.classList = []
+        element.classList.add(My_Selection)
+        element.classList.add("favoriteItem")    
+    }
+    
+
+})
 export const FavoritesList = () => {
     const favoriteItems = useFavorites()
     return render(favoriteItems)
